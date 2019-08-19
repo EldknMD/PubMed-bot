@@ -11,7 +11,7 @@ client.on("message", message => {
 
         
     if (message.content == "diabetes") {
-pubmed.search('2 type diabetes').then((results) => {
+pubmed.search('2 type diabetes', 0, 2).then((results) => {
     var resultado = JSON.stringify(results)
     message.channel.send(resultado)
     console.log(results)
