@@ -14,7 +14,7 @@ client.on("message", message => {
         
     if (message.content == "diabetes") {
 pubmed.search('2 type diabetes', 0, 1).then((results) => {
-    message.channel.send(results.papers);    
+    message.channel.send(results.papers[0].title); 
 })
 
 }}});
